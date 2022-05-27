@@ -36,7 +36,7 @@ export default function Home() {
         <div>
             <Head>
                 <title>Super Mario Sunshine Speedrunning Community</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="./favicon.ico" />
             </Head>
             <div className="fixed min-h-full min-w-full bg-tile-background bg-repeat">
                 <video
@@ -45,7 +45,7 @@ export default function Home() {
                     muted
                     loop
                     id="bgvideo">
-                    <source src="/sms_landing_background.mp4" type="video/mp4" />
+                    <source src="./sms_landing_background.mp4" type="video/mp4" />
                 </video>
                 <div className="fixed min-h-full min-w-full bg-black opacity-60" />
             </div>
