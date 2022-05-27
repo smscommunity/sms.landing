@@ -50,7 +50,7 @@ export default function Home() {
                 <div className="fixed min-h-full min-w-full bg-black opacity-60" />
             </div>
             <div>
-                <main className={'min-h-screen flex flex-col justify-center text-center z-20 m:w-3/4 m-auto py-16 overflow-scroll'}>
+                <main className={'min-h-screen flex flex-col justify-center text-center z-20 m:w-3/4 m-auto py-16 overflow-y-auto'}>
                     <div>
                         <div className="h-auto text-5xl font-bold text-white mb-10">
                           Super Mario Sunshine Speedrunning Community
@@ -71,7 +71,7 @@ export default function Home() {
                       <HomepageButton href="https://discord.gg/jX38aXCv9y" label="Discord Server" />
                       <HomepageButton href="https://twitch.tv/sunshinecommunity" label="Twitch" />
                       <HomepageButton href="https://sunmar.io/il" label="IL Spreadsheet" />
-                      <HomepageButton href="https://ilview.sumar.io" label="IL Leaderboard Viewer" />
+                      <HomepageButton href="https://ilview.sunmar.io" label="IL Leaderboard Viewer" />
                       <HomepageButton href="https://sms.bingo" label="Bingo" />
                       <HomepageButton href="https://twitter.com/sunshinecommunity" label="Twitter" />
                       <HomepageButton href="https://www.youtube.com/user/SMSCommunity" label="Youtube" />
