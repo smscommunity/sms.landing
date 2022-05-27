@@ -38,7 +38,7 @@ export default function Home() {
                 <title>Super Mario Sunshine Speedrunning Community</title>
                 <link rel="icon" href="./favicon.ico" />
             </Head>
-            <div className="fixed min-h-full min-w-full bg-tile-background bg-repeat">
+            <div className="fixed min-h-full -z-10 min-w-full bg-tile-background bg-repeat">
                 <video
                     className="fixed min-h-full min-w-full object-cover"
                     autoPlay
@@ -49,8 +49,8 @@ export default function Home() {
                 </video>
                 <div className="fixed min-h-full min-w-full bg-black opacity-60" />
             </div>
-            <div className="fixed min-h-screen min-w-full">
-                <main className={'min-h-screen flex flex-col justify-center text-center z-20 w-3/4 mx-auto'}>
+            <div>
+                <main className={'min-h-screen flex flex-col justify-center text-center z-20 m:w-3/4 m-auto py-16 overflow-scroll'}>
                     <div>
                         <div className="h-auto text-5xl font-bold text-white mb-10">
                           Super Mario Sunshine Speedrunning Community
