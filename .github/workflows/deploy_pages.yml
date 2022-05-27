@@ -1,0 +1,36 @@
+name: Build & Deploy
+
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/cache@v2
+              with:
+                path: ${{ github.workspace }}/.next/cache
+                # Generate a new cache whenever packages or source files change.
+                key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**.[jt]sx?') }}
+                # If source files changed but packages didn't, rebuild from a prior cache.
+                restore-keys: |
+                  ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
+            - name: Cache + Install
+              uses: bahmutov/npm-install@v1
+            - name: Test
+              run: npm run test --if-present
+            - name: Build
+              run: npm run build --if-present
+            - name: Export
+              run: |
+                npm run export
+                touch out/.nojekyll
+            - name: Deploy folder to pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                publish_dir: ./out
+                user_name: 'Jane Landing'
+                user_email: 'launchthecommunity@github.com'
