@@ -4,7 +4,7 @@ export default function Discord() {
     return (
         <div>
             <Head>
-                <meta http-equiv="refresh" content="0;url=https://discord.gg/jX38aXCv9y" />
+                <meta httpEquiv="refresh" content="0;url=https://discord.gg/jX38aXCv9y" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div>
