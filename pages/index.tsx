@@ -5,25 +5,6 @@ import HomepageButton from '../components/HomepageButton';
 
 export default function Home() {
     // const startHere = [
-    //     ['Delay Clicks', ' Start Here'],
-    //     ['Win Conditions', ' Start Here'],
-    //     ['Sirena 1 Hundreds', ' Starts Here'],
-    //     ['Sunshine Fans', ' Start Here'],
-    //     ['Bingo Enthusiasts', ' Start Here'],
-    //     ['Counting to 12', ' Starts Here'],
-    //     ['Sunshine Bingo', ' Starts Here'],
-    //     ['Sirena Whenever', ' Starts Here'],
-    //     ['Life Grinding', ' Starts Here'],
-    //     ['Wiggler ILs', ' Start Here'],
-    //     ['Ricco 3 Hoverless', ' Starts Here'],
-    //     ['Fifty from Two', ' Starts Here'],
-    //     ['Seven Shines in Secrets', ' Starts Here'],
-    //     ['Yellow Button Coins', ' Start Here'],
-    //     ['Lighthouse Rush', ' Starts Here'],
-    //     ['Fire Piantas', ' Start Here'],
-    //     ['King Boo Lockout', ' Starts Here'],
-    //     ['River Gang', ' Starts Here'],
-    //     ['Hidden Reds Hoverless', ' Starts Here'],
     // ];
     // const [startHereIndex, setStartHereIndex] = React.useState(
     //     Math.floor(Math.random() * startHere.length)
