@@ -71,7 +71,7 @@ export default function Home() {
             </Head>
             <div className="fixed min-h-full -z-10 min-w-full bg-tile-background bg-repeat">
                 <video
-                    className="fixed min-h-full min-w-full object-cover"
+                    className="fixed min-h-full min-w-full object-cover object-center h-full w-full"
                     autoPlay
                     muted
                     loop
