@@ -3,6 +3,13 @@ import Link from 'next/link';
 import React from 'react';
 import HomepageButton from '../components/HomepageButton';
 
+interface ILInfo {
+    file: string;
+    player: string;
+    level: string;
+    baseUrl: string;
+}
+
 export default function Home() {
     // const startHere = [
     // ];
@@ -13,6 +20,49 @@ export default function Home() {
     // const randomizeStartHere = React.useCallback(() => {
     //     setStartHereIndex(Math.floor(Math.random() * startHere.length));
     // }, []);
+
+    const bgILs: ILInfo[] = [
+        {
+            file: './bianco_4_rimato.mp4',
+            player: 'Rimato13',
+            level: 'Bianco 4',
+            baseUrl: 'https://www.youtube.com/watch?v=jEwYvHAaFr0',
+        },
+        {
+            file: './bianco_6r_trey.mp4',
+            player: 'AverageTrey',
+            level: 'Bianco 6 No-Hover',
+            baseUrl: 'https://www.youtube.com/watch?v=bFplU7J2Png',
+        },
+        {
+            file: './ricco_1_diddeh.mp4',
+            player: 'nindiddeh',
+            level: 'Ricco 1',
+            baseUrl: 'https://www.youtube.com/watch?v=KFESDl87V_w',
+        },
+        {
+            file: './pinna_3_jer.mp4',
+            player: 'Jer',
+            level: 'Pinna 3',
+            baseUrl: 'https://www.youtube.com/watch?v=kBIHINSXADo',
+        },
+        {
+            file: './sirena_8_despin.mp4',
+            player: 'Despin',
+            level: 'Sirena 8',
+            baseUrl: 'https://www.youtube.com/watch?v=cT-zaqotNqw'
+        },
+        {
+            file: './noki_6s_jpep.mp4',
+            player: 'jpep',
+            level: 'Noki 6 Secret',
+            baseUrl: 'https://www.youtube.com/watch?v=Y3ZF3DXhJ8I'
+        }
+    ]
+
+    const randomILIndex = Math.floor(Math.random() * bgILs.length)
+    const selectedIl = bgILs[randomILIndex];
+
     return (
         <div>
             <Head>
@@ -25,8 +75,9 @@ export default function Home() {
                     autoPlay
                     muted
                     loop
+                    poster="/fullbackground.png"
                     id="bgvideo">
-                    <source src="./sms_landing_background.mp4" type="video/mp4" />
+                    <source src={selectedIl.file} type="video/mp4" />
                 </video>
                 <div className="fixed min-h-full min-w-full bg-black opacity-60" />
             </div>
@@ -63,10 +114,8 @@ export default function Home() {
                             </div>
                         </Link> */}
                     </div>
-                    <div className="flex flex-row justify-center">
-                    </div>
-                    <div className="flex flex-row justify-center">
-
+                    <div className='bottom-0 left-0 fixed float-left font-bold text-white text-x p-3'>
+                        <Link href={selectedIl.baseUrl}>{"🎬" + selectedIl.player + " - " + selectedIl.level}</Link>
                     </div>
                 </main>
             </div>
