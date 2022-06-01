@@ -54,7 +54,7 @@ export default function Home() {
                       <HomepageButton href="https://sunmar.io/il" label="IL Spreadsheet" />
                       <HomepageButton href="https://ilview.sunmar.io" label="IL Leaderboard Viewer" />
                       <HomepageButton href="https://sms.bingo" label="Bingo" />
-                      <HomepageButton href="https://twitter.com/sunshinecommunity" label="Twitter" />
+                      <HomepageButton href="https://twitter.com/smscommunity" label="Twitter" />
                       <HomepageButton href="https://www.youtube.com/user/SMSCommunity" label="Youtube" />
                       <HomepageButton href="https://smscommunity.github.io/sms-guide/tutorials" label="Tutorials and Guides" />
                         {/* <Link href="https://docs.google.com/spreadsheets/d/1gN6xyfIoaDTwf04Oz_Yvf5AKNwhfTPi4pA0Bx4_ebMk/edit#gid=0">
