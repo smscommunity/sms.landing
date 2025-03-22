@@ -23,7 +23,7 @@ export default function ShortLink(props: ShortLinkProps) {
 // 1. Edit shortLinks to contain your new short link slug.
 // 2. Update getHref to add to the case/switch the new link you want to shortlink to.
 // 3. You are done!
-const shortLinks = ['discord', 'il', 'wiki'] as const;
+const shortLinks = ['discord', 'il', 'wiki', 'twitch', 'yt'] as const;
 type ShortLinks = typeof shortLinks[number];
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
@@ -43,6 +43,10 @@ function getHref(shortLinkTarget: ShortLinks): string {
             return 'https://docs.google.com/spreadsheets/d/12wDUXjLqmcUuWSEXWc1fHNJc24KlfyCh0pvibZYEQM0/edit#gid=0'
         case 'wiki':
             return 'https://smscommunity.github.io/sms-guide/'        
+        case 'twitch':
+            return 'https://www.twitch.tv/sunshinecommunity'
+        case 'yt'
+            return 'https://www.youtube.com/@SMSCommunity'
     }
 }
 
